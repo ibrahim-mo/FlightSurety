@@ -24,7 +24,33 @@
         <div id="display-wrapper" class="top-20">
         </div>
         <div class="row top-20">
-            <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+            <!-- <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn> -->
+            <label class="form" for="flight-number">Flight</label>
+            <select name="flight-number" id="flight-number">
+                <!-- flight ID; flight index; airline index -->
+                <option value="KL 1830;0;0">KL 1830</option>
+                <option value="TK 290;1;1">TK 290</option>
+                <option value="LX 39;2;2">LX 39</option>
+                <option value="FI 529;3;3">FI 529</option>
+                <option value="B6 133;4;4">B6 133</option>
+            </select>
+            <label class="form" id="flight-status">Status Unknown</label>
+        </div>
+        <div class="row top-20">
+            <label class="form" for="passenger-id">Passenger</label>
+            <select name="passenger-id" id="passenger-id">
+                <option value="0">User1</option>
+                <option value="1">User2</option>
+                <option value="2">User3</option>
+                <option value="3">User4</option>
+                <option value="4">User5</option>
+            </select>
+            <input type="text" id="amount"> <label class="form">ether</label>
+            <btn class="btn btn-primary" id="buy-insurance">Buy Flight Insurance</btn>
+            <btn class="btn btn-primary" id="pay-credit">Pay Credit</btn>
+        </div>
+        <div class="row top-20">
+            <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
         </div>
     </main>
 

@@ -22,7 +22,29 @@ import './flightsurety.css';
             let flight = DOM.elid('flight-number').value;
             // Write transaction
             contract.fetchFlightStatus(flight, (error, result) => {
-                display('Oracles', 'Trigger oracles', [ { label: 'Fetch Flight Status', error: error, value: result.flight + ' ' + result.timestamp} ]);
+                if (error) console.error(error);
+                display('Oracles', 'Trigger oracles', [ { label: 'Fetch Flight Status', error: error,
+                                                          value: '[' + result.airline + ']: ' + result.flight + ' ' + result.timestamp } ]);
+            });
+        })
+
+        DOM.elid('buy-insurance').addEventListener('click', () => {
+            let flight = DOM.elid('flight-number').value;
+            let passenger_id = DOM.elid('passenger-id').value;
+            let amount = DOM.elid('amount').value;
+            // Write transaction
+            contract.buy(flight, passenger_id, amount, (error, result) => {
+                if (error) console.error(error);
+                else console.log(result);
+            });
+        })
+
+        DOM.elid('pay-credit').addEventListener('click', () => {
+            let passenger_id = DOM.elid('passenger-id').value;
+            // Write transaction
+            contract.pay(passenger_id, (error, result) => {
+                if (error) console.error(error);
+                else console.log(result);
             });
         })
     
@@ -46,10 +68,3 @@ function display(title, description, results) {
     displayDiv.append(section);
 
 }
-
-
-
-
-
-
-

@@ -1,52 +1,22 @@
-# FlightSurety
+# Flight Surety Project for the Udacity's Blockchain Nanondegree
+## Author: Ibrahim Almohandes; August 23, 2021
 
-FlightSurety is a sample application project for Udacity's Blockchain course.
+### Tool specs:
 
-## Install
+- Truffle v5.4.6 (core: 5.4.6)
+- Solidity - ^0.5.0 (solc-js)
+- Node v14.17.5
+- Web3.js v1.5.1
+- Ganache (GUI) 2.5.4
 
-This repository contains Smart Contract code in Solidity (using Truffle), tests (also using Truffle), dApp scaffolding (using HTML, CSS and JS) and server app scaffolding.
+### How to run:
 
-To install, download or clone the repo, then:
+Create a Ganache project from [truffle.js](./truffle.js). Make sure to use the menmonic specified at the top of the file, and set the number of acounts to 50.
 
-`npm install`
-`truffle compile`
+The instructions for deploying, testing, and starting the oracle server and dapp client are as specified in the [PROJECT.md](./PROJECT.md) file.
 
-## Develop Client
+### NOTE:
 
-To run truffle tests:
+When loading the dapp client into the browser, please wait for a few minutes until all the oracles, airlines, passengers, and flights are registered, funded, and/or initialized.
 
-`truffle test ./test/flightSurety.js`
-`truffle test ./test/oracles.js`
-
-To use the dapp:
-
-`truffle migrate`
-`npm run dapp`
-
-To view dapp:
-
-`http://localhost:8000`
-
-## Develop Server
-
-`npm run server`
-`truffle test ./test/oracles.js`
-
-## Deploy
-
-To build dapp for prod:
-`npm run dapp:prod`
-
-Deploy the contents of the ./dapp folder
-
-
-## Resources
-
-* [How does Ethereum work anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
-* [BIP39 Mnemonic Generator](https://iancoleman.io/bip39/)
-* [Truffle Framework](http://truffleframework.com/)
-* [Ganache Local Blockchain](http://truffleframework.com/ganache/)
-* [Remix Solidity IDE](https://remix.ethereum.org/)
-* [Solidity Language Reference](http://solidity.readthedocs.io/en/v0.4.24/)
-* [Ethereum Blockchain Explorer](https://etherscan.io/)
-* [Web3Js Reference](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+Thank you!

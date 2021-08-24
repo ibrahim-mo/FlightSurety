@@ -37,6 +37,18 @@ label.form {
     font-size: 14px;
     margin-right: 20px;
 }
+
 input {
-    margin-right: 30px;
+    width: 110px;
+    margin-right: 20px;
+}
+
+select {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#buy-insurance {
+    margin-right: 20px;
 }
